@@ -78,6 +78,7 @@ SQL
 SELECT AVG(seed) AS avg_champion_seed
 FROM CBB
 WHERE POSTSEASON = 'Champions';
+```
 
 Insight
 
