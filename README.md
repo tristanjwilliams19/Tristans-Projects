@@ -74,7 +74,8 @@ What seed typically wins the NCAA tournament?
 
 SQL
 
-SELECT AVG(Seed) AS avg_champion_seed
+```sql
+SELECT AVG(seed) AS avg_champion_seed
 FROM CBB
 WHERE POSTSEASON = 'Champions';
 
