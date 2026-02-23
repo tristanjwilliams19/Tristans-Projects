@@ -66,6 +66,90 @@ The analysis followed this workflow:
 
 ---
 
+## 🗄 SQL Analysis
+
+**📊 Query 1: Average Seed of Champions**
+
+What seed typically wins the NCAA tournament?
+
+SQL
+
+SELECT AVG(Seed) AS avg_champion_seed
+FROM CBB
+WHERE POSTSEASON = 'Champions';
+
+Insight
+
+Average championship seed ≈ 1.89
+
+Confirms that top-seeded teams dominate historically
+
+Supports the hypothesis that seeding is a strong predictor of tournament success
+
+📊 Query 2: Identify Lower-Seed Teams Making Deep Runs
+
+Business Question:
+How often do lower-seeded teams (9–16) advance past the Round of 64?
+
+SQL
+
+SELECT *
+FROM CBB
+WHERE (
+    POSTSEASON = 'R32' AND SEED >= 9 OR
+    POSTSEASON = 'S16' AND SEED >= 9 OR
+    POSTSEASON = 'E8' AND SEED >= 9 OR
+    POSTSEASON = 'F4' AND SEED >= 9
+);
+
+Insight
+
+Multiple lower-seeded teams advance each year
+
+Upsets are common in early rounds
+
+However, these teams rarely convert deep runs into championships
+
+📊 Query 3: Count of Champions in Dataset
+
+Business Question:
+How many championship teams exist in the dataset?
+
+SQL
+
+SELECT COUNT(*) AS champion_count
+FROM CBB
+WHERE POSTSEASON = 'Champions';
+
+Insight
+
+Confirms dataset coverage and validation of championship sample size
+
+Used to support downstream threshold analysis
+
+📊 Query 4: Frequency of Lower-Seed Upsets
+
+Business Question:
+How frequently do Seeds 9–16 outperform expectations?
+
+SQL
+
+SELECT COUNT(*) AS upset_count
+FROM CBB
+WHERE (
+    POSTSEASON = 'R32' AND SEED >= 9 OR
+    POSTSEASON = 'S16' AND SEED >= 9 OR
+    POSTSEASON = 'E8' AND SEED >= 9 OR
+    POSTSEASON = 'F4' AND SEED >= 9
+);
+
+Insight
+
+Upsets occur regularly in early rounds
+
+Reinforces the “Madness” narrative while still showing structural patterns
+---
+
 ## 🔍 Key Findings
 
 ### 🥇 Championship Profile
@@ -201,15 +285,13 @@ See the full slide deck:
 * [WarrenNolan.com](https://www.warrennolan.com/basketball/2022/stats-adv-efg-percent)​
 * [NCAA.com](https://www.ncaa.com/brackets/basketball-men/d1/2022)
 * [Kenpom.com](https://kenpom.com/)
-  
-(Replace with full formatted links)
 
 ---
 
-## 💡 Business / Analytics Takeaway
+## 💡 Analytical Takeaway
 
 Even in high-variance environments like March Madness, elite teams consistently share measurable efficiency and strength-of-schedule characteristics. While upsets remain part of the tournament’s appeal, data can meaningfully improve bracket strategy and team evaluation.
 
 ---
 
-**Disclaimer:** This analysis is for educational and analytical purposes only and is not gambling advice.
+**Disclaimer:** This analysis is for analytical purposes only and is not gambling advice.
