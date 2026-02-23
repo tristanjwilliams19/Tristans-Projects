@@ -72,29 +72,18 @@ The analysis followed this workflow:
 
 What seed typically wins the NCAA tournament?
 
-SQL
-
 ```sql
 SELECT AVG(seed) AS avg_champion_seed
 FROM CBB
 WHERE POSTSEASON = 'Champions';
 ```
 
-Insight
 
-Average championship seed ≈ 1.89
+**📊 Query 2: Identify Lower-Seed Teams Making Deep Runs**
 
-Confirms that top-seeded teams dominate historically
-
-Supports the hypothesis that seeding is a strong predictor of tournament success
-
-📊 Query 2: Identify Lower-Seed Teams Making Deep Runs
-
-Business Question:
 How often do lower-seeded teams (9–16) advance past the Round of 64?
 
-SQL
-
+```
 SELECT *
 FROM CBB
 WHERE (
@@ -103,39 +92,23 @@ WHERE (
     POSTSEASON = 'E8' AND SEED >= 9 OR
     POSTSEASON = 'F4' AND SEED >= 9
 );
+```
 
-Insight
+**📊 Query 3: Count of Champions in Dataset**
 
-Multiple lower-seeded teams advance each year
-
-Upsets are common in early rounds
-
-However, these teams rarely convert deep runs into championships
-
-📊 Query 3: Count of Champions in Dataset
-
-Business Question:
 How many championship teams exist in the dataset?
 
-SQL
-
+```
 SELECT COUNT(*) AS champion_count
 FROM CBB
 WHERE POSTSEASON = 'Champions';
+```
 
-Insight
+**📊 Query 4: Frequency of Lower-Seed Upsets**
 
-Confirms dataset coverage and validation of championship sample size
-
-Used to support downstream threshold analysis
-
-📊 Query 4: Frequency of Lower-Seed Upsets
-
-Business Question:
 How frequently do Seeds 9–16 outperform expectations?
 
-SQL
-
+```
 SELECT COUNT(*) AS upset_count
 FROM CBB
 WHERE (
@@ -144,7 +117,7 @@ WHERE (
     POSTSEASON = 'E8' AND SEED >= 9 OR
     POSTSEASON = 'F4' AND SEED >= 9
 );
-
+```
 Insight
 
 Upsets occur regularly in early rounds
@@ -164,6 +137,7 @@ Historical champions (2013–2021) typically share the following characteristics
 * Strong strength-of-schedule indicators (WAB)
 
 **Mean (AVG) championship seed:** 1.89
+
 **Modal (Most frequent) champion seed:** #1 seed
 
 👉 Interpretation: While upsets occur, championship winners still overwhelmingly come from highly ranked teams with elite efficiency metrics.
