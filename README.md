@@ -14,7 +14,7 @@ The NCAA March Madness tournament is well known for its unpredictability and fre
 
 The goal is to move beyond the narrative of “madness” and determine whether measurable performance indicators can meaningfully explain tournament outcomes.
 
-[View Presentation](March Madness - The Statistical analysis of what makes a Champion.pdf)
+[View Presentation](Tristans-Projects/March Madness - The Statistical analysis of what makes a Champion.pdf)
 
 ---
 
