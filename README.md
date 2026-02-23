@@ -122,10 +122,6 @@ WHERE (
 ```
 
 
-Insight
-
-Upsets occur regularly in early rounds
-
 Reinforces the “Madness” narrative while still showing structural patterns
 ---
 
