@@ -83,7 +83,8 @@ WHERE POSTSEASON = 'Champions';
 
 How often do lower-seeded teams (9–16) advance past the Round of 64?
 
-```SELECT *
+```sql
+SELECT *
 FROM CBB
 WHERE (
     POSTSEASON = 'R32' AND SEED >= 9 OR
@@ -98,7 +99,7 @@ WHERE (
 
 How many championship teams exist in the dataset?
 
-```
+```sql
 SELECT COUNT(*) AS champion_count
 FROM CBB
 WHERE POSTSEASON = 'Champions';
@@ -109,7 +110,7 @@ WHERE POSTSEASON = 'Champions';
 
 How frequently do Seeds 9–16 outperform expectations?
 
-```
+```sql
 SELECT COUNT(*) AS upset_count
 FROM CBB
 WHERE (
