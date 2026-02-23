@@ -94,6 +94,7 @@ WHERE (
 );
 ```
 
+
 **📊 Query 3: Count of Champions in Dataset**
 
 How many championship teams exist in the dataset?
@@ -103,6 +104,7 @@ SELECT COUNT(*) AS champion_count
 FROM CBB
 WHERE POSTSEASON = 'Champions';
 ```
+
 
 **📊 Query 4: Frequency of Lower-Seed Upsets**
 
@@ -118,6 +120,8 @@ WHERE (
     POSTSEASON = 'F4' AND SEED >= 9
 );
 ```
+
+
 Insight
 
 Upsets occur regularly in early rounds
