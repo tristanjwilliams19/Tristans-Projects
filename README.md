@@ -83,9 +83,7 @@ WHERE POSTSEASON = 'Champions';
 
 How often do lower-seeded teams (9–16) advance past the Round of 64?
 
-```
-
-SELECT *
+```SELECT *
 FROM CBB
 WHERE (
     POSTSEASON = 'R32' AND SEED >= 9 OR
