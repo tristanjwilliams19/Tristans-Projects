@@ -197,10 +197,11 @@ See the full slide deck:
 
 ## 🔗 References
 
-* KenPom
-* WarrenNolan
-* NCAA.com
-
+* [March Madness Historical Data - Kaggle.com](https://www.kaggle.com/datasets/arnavs19/march-madness-historical-data-2012-2023)
+* [WarrenNolan.com](https://www.warrennolan.com/basketball/2022/stats-adv-efg-percent)​
+* [NCAA.com](https://www.ncaa.com/brackets/basketball-men/d1/2022)
+* [Kenpom.com](https://kenpom.com/)
+  
 (Replace with full formatted links)
 
 ---
