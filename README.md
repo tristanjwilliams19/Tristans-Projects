@@ -1,7 +1,9 @@
 # 🏀 March Madness Tournament Success Analysis (2024)
 
 **Author:** Tristan Williams
+
 **Project Type:** Sports Analytics | Predictive Analysis
+
 **Tools:** SQL / Excel / Tableau
 
 ---
