@@ -251,14 +251,6 @@ However, tournament outcomes remain partially driven by matchup variance and ran
 
 ---
 
-## 📎 Executive Presentation
-
-See the full slide deck:
-
-**/presentation/March_Madness_Analysis.pdf**
-
----
-
 ## 🔗 References
 
 * [March Madness Historical Data - Kaggle.com](https://www.kaggle.com/datasets/arnavs19/march-madness-historical-data-2012-2023)
